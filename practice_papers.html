@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Tests | GCSE Revision Hub</title>
+    <title>Practice Papers | GCSE Revision Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .download-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .download-info h3 {
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+        .download-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .download-bar {
+            display: flex;
+            gap: 0.75rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,16 +47,41 @@
 
     <main class="content-container">
         <section class="notes-header">
-            <h2>Official Edexcel Practice Papers</h2>
-            <p>Access past question papers and mark schemes directly from the official Pearson support portal.</p>
+            <h2>Edexcel Practice Papers & Downloads</h2>
+            <p>Direct download bars for quick access to official exam materials.</p>
         </section>
 
-        <div class="module-grid">
-            <article class="module-card">
-                <h3>Pearson Past Papers Hub</h3>
-                <p>Search and download official Edexcel GCSE question papers, mark schemes, and examiner reports.</p>
-                <a href="https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html" target="_blank" class="btn-primary">Open Pearson Portal</a>
-            </article>
+        <div class="download-card">
+            <div class="download-info">
+                <h3>Edexcel Combined Science: Biology Paper 1</h3>
+                <p>Foundation & Higher Tier Question Papers + Mark Schemes</p>
+            </div>
+            <div class="download-bar">
+                <a href="https://qualifications.pearson.com/content/dam/pdf/GCSE/Combined-Science/2016/Specification%20and%20sample%20assessments/GCSE_Combined_Science_Biology_Sample_Assessment_Materials.pdf" target="_blank" class="btn-primary">Download Question Paper (.pdf)</a>
+                <a href="https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html" target="_blank" class="btn-primary" style="background-color: #3498db;">Mark Scheme</a>
+            </div>
+        </div>
+
+        <div class="download-card">
+            <div class="download-info">
+                <h3>Edexcel GCSE Mathematics: Paper 1 (Non-Calculator)</h3>
+                <p>Core Tier Practice Assessment</p>
+            </div>
+            <div class="download-bar">
+                <a href="https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/specification-and-sample-assessments/GCSE_Maths_Higher_Tier_Paper_1_Sample_Assessment_Materials.pdf" target="_blank" class="btn-primary">Download Question Paper (.pdf)</a>
+                <a href="https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html" target="_blank" class="btn-primary" style="background-color: #3498db;">Mark Scheme</a>
+            </div>
+        </div>
+
+        <div class="download-card">
+            <div class="download-info">
+                <h3>Edexcel Combined Science: Chemistry Paper 1</h3>
+                <p>Core chemistry concepts past materials</p>
+            </div>
+            <div class="download-bar">
+                <a href="https://qualifications.pearson.com/content/dam/pdf/GCSE/Combined-Science/2016/Specification%20and%20sample%20assessments/GCSE_Combined_Science_Chemistry_Sample_Assessment_Materials.pdf" target="_blank" class="btn-primary">Download Question Paper (.pdf)</a>
+                <a href="https://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html" target="_blank" class="btn-primary" style="background-color: #3498db;">Mark Scheme</a>
+            </div>
         </div>
     </main>
 
