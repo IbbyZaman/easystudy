@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",
-    "check": "npm run build"
+    "check": "npm run build",
+    "deploy:cloudflare": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "firebase": "^12.3.0",
@@ -18,7 +19,6 @@
     "react-router-dom": "^7.9.1"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.13.0",
     "@vitejs/plugin-react": "^5.0.4",
     "vite": "^7.1.7",
     "wrangler": "^4.42.0"

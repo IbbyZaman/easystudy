@@ -9,6 +9,17 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        document.getElementById('root').innerHTML = `
+          <div style="font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:720px;margin:64px auto;padding:32px;border:1px solid #ddd;border-radius:24px;line-height:1.55">
+            <h1 style="margin-top:0">EasyStudy needs its local server</h1>
+            <p>Don't open <strong>index.html</strong> directly. This is a Vite/React app, so the browser cannot load it correctly from a <code>file://</code> address.</p>
+            <p><strong>Windows:</strong> double-click <code>START-WINDOWS.bat</code> in this folder. On first launch it will install the packages, start EasyStudy, and open <code>http://localhost:5173</code>.</p>
+            <p>You can also open a terminal in this folder and run <code>npm install</code>, then <code>npm run dev</code>.</p>
+          </div>`;
+      }
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

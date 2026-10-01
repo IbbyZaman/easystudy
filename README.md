@@ -147,3 +147,36 @@ The custom UI controls the official YouTube embedded player. It does **not** rem
 ## Next content expansion
 
 The app ships with a starter curriculum dataset so every major feature works immediately. For a genuinely large content library, expand `src/data/subjects.js` / `src/data/questions.js`, or move curated/licensed public content into a separate content database/API. Avoid copying copyrighted textbooks, paid revision-site databases or restricted past-paper content without permission.
+
+## GitHub Pages preview (fixed in v3)
+
+Uploading the React source directly to GitHub Pages will show a blank page because Pages does not transpile JSX. This project now includes `.github/workflows/pages.yml`, which installs dependencies, builds the Vite app, and publishes the `dist` output automatically.
+
+After pushing the project to GitHub:
+
+1. Open the repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Push/commit to `main` (or run the workflow manually from **Actions**).
+5. Wait for the **Deploy EasyStudy to GitHub Pages** workflow to become green.
+
+The Vite base path is automatically set to your repository name for GitHub Pages, and `404.html` is generated so React routes can still load when opened directly.
+
+### Firebase and GitHub Pages
+
+If Google sign-in is blocked on the Pages URL, add the GitHub Pages hostname (for example `yourname.github.io`) in Firebase Console → Authentication → Settings → Authorized domains. Do the same for your final Cloudflare/custom domain.
+
+## Cloudflare deployment
+
+Cloudflare remains the intended production host. `wrangler.jsonc` now serves the built `dist` directory through Workers Static Assets, uses SPA fallback routing, and runs the Worker first only for `/api/*`. Build and deploy with:
+
+```bash
+npm ci
+npm run deploy:cloudflare
+```
+
+Add the YouTube Data API key only as a Cloudflare secret, never to GitHub source:
+
+```bash
+npx wrangler secret put YOUTUBE_API_KEY
+```

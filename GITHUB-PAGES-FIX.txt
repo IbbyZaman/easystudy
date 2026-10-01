@@ -1,0 +1,21 @@
+WHY THE OLD VERSION WAS BLANK ON GITHUB PAGES
+
+GitHub Pages was serving the React/Vite SOURCE files. Browsers cannot run src/main.jsx directly because Vite normally compiles it first.
+
+THIS V3 FIXES THAT:
+- Includes .github/workflows/pages.yml
+- GitHub Actions runs npm ci + npm run build
+- Only the built dist/ output is published
+- Vite automatically uses /YOUR-REPO/ as the asset base on GitHub Pages
+- React Router uses the same base path
+- A dist/404.html fallback is generated for direct route refreshes
+
+TO USE IT:
+1. Upload ALL files, including the hidden .github folder, to the repository root.
+2. GitHub repo -> Settings -> Pages.
+3. Set Source to GitHub Actions.
+4. Open Actions and wait for "Deploy EasyStudy to GitHub Pages" to finish.
+5. Open the Pages URL shown by GitHub.
+
+NOTE:
+Cloudflare is still the production server setup. GitHub Pages is just a convenient preview/deploy option.
