@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "easystudy",
+  "compatibility_date": "2026-10-01",
+  "main": "./worker/index.js",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  }
+}

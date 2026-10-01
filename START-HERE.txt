@@ -1,0 +1,12 @@
+EASYSTUDY — START HERE
+
+1) Upload this whole folder to GitHub.
+2) Run: npm install
+3) Run: npm run dev
+4) Deploy firestore.rules before going public.
+5) For in-app YouTube search, add YOUTUBE_API_KEY as a Cloudflare secret.
+   YouTube URL import/player works without the search key.
+6) Deploy with: npm run deploy
+7) Add your deployed domain to Firebase Authentication > Settings > Authorized domains.
+
+Full instructions are in README.md.
